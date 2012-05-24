@@ -1,0 +1,118 @@
+#content {
+	float: left;
+	width: 920px;
+	height: 100%;
+	margin: 0 0 0 10px;
+}
+
+/*** #customer-info ***/
+#customer-info {
+	float: left;
+	width: 100%;
+	margin: 0 0 5px 0;
+}
+#customer-info h3 {
+	color: #8a8a8a;
+	margin: 10px 0 10px 0;
+}
+#customer-info table {
+	font-size: 12px;
+	text-align: left;
+	margin: 5px 0 5px 5px;
+	float: left;
+}
+#customer-info table td:nth-child(2) {
+	padding: 0 0 0 20px;
+}
+#customer-info table {
+	margin: 0 30px 10px 0;
+}
+#customer-info .submit {
+	width: 120px;
+	height: 25px;
+	font-size: 12px;
+	margin: 4px 0 0 0;
+	color: #5a5a5a;
+	border-radius: 3px;
+	background-color: #efefef;
+	border: 1px solid #afafaf;
+	text-decoration: none;
+}
+#customer-info a.submit {
+	padding: 4px 20px;
+}
+#customer-info .submit:hover {
+	background-color: #cfcfcf;
+}
+.button-groups {
+	margin: 0 0 10px 0;
+}
+
+
+/*** #transactions ***/
+#transactions h3 {
+	margin: 10px 0 10px 0;
+	color: #8a8a8a;
+}
+#transactions {
+	float: left;
+	width: 100%;
+	margin: 5px 0 0 0;
+}
+
+#transactions .tabs {
+	list-style-type: none;
+	float: left;
+	clear:both;
+}
+#transactions .tabs li {
+	float: left
+	
+}
+#transactions .tabs li a {
+	border: 1px solid #afafaf;
+	padding: 3px 5px;
+	margin: 0 2px 0 2px;
+	font-size: 12px;
+	color: #8a8a8a;
+	display: block;
+	text-decoration: none;
+	border-radius: 5px 5px 0 0;
+	background-color: #efefef;
+	width: 100px;
+}
+#transactions .tabs li a:hover {
+	background-color: #cfcfcf;
+	color: #6a6a6a;
+}
+#transactions .tabs li a.selected {
+	background-color: #cfcfcf;
+}
+
+#transactions table {
+	width: 100%;
+	font-size: 12px;
+	float: left;
+	clear: both;
+	text-align: left;
+	border-collapse: collapse;
+	border: 1px solid #afafaf;
+	padding: 5px 10px;
+	margin: 4px 0 0 2px;
+}
+#transactions table th {
+	color: #fff;
+	border: 1px solid #afafaf;
+	padding: 5px 10px;
+	background-color: #9a9a9a;
+}
+#transactions table td {
+	border: 1px solid #afafaf;
+	padding: 5px 10px;
+}
+#transactions table tr:nth-child(n+2) {
+	background-color: #efefef;
+}
+
+
+
