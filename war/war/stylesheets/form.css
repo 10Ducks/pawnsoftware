@@ -1,0 +1,57 @@
+h2 {
+	padding: 5px;
+}
+#form {
+	font-size: 12px;
+	margin: 5px;
+}
+#form .button-groups {
+	margin: 20px 0 20px 0;
+}
+#form input {
+	border: 1px solid #afafaf;
+	width: 300px;
+	padding: 2px;
+}
+#form input.submit {
+	width: 80px;
+	height: 30px;
+	background-color: #cfcfcf;
+	border-radius: 3px;
+}
+#form input.submit:hover {
+	width: 80px;
+	height: 30px;
+	background-color: #efefef;
+}
+#form select {
+	padding: 2px;
+	border: 1px solid #afafaf;
+	display: block;
+}
+
+
+#form table {
+	width: 500px;
+	margin: 0 20px 20px 0;
+	float: left;
+}
+#form table caption {
+	border: 1px solid #afafaf;
+	font-size: 15px;
+	font-weight: bold;
+	background-color: #8a8a8a;
+	color: #ffffff;
+	height: 20px;
+	padding: 5px;
+	text-align: left;
+}
+#form table th {
+	text-align: right;
+	width: 100px;
+}
+#form table td {
+	padding: 0 0 0 20px;
+	text-align: left;
+	width: 300px;
+}
