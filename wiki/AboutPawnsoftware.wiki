@@ -1,4 +1,4 @@
-#This describes how Pawnsoftware will be used, features, types of technology used, and all other functions.
+This describes how Pawnsoftware will be used, features, types of technology used, and all other functions.
 
 = How To Use Pawnsoftware =
 
