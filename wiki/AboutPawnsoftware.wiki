@@ -1,15 +1,29 @@
-This describes how Pawnsoftware will be used, features, types of technology used, and all other functions.
-
-= How To Use Pawnsoftware =
-
+#labels Featured
 = Introduction =
+Pawnsoftware is a java written software that manages customers information, pawn information, invoices, inventory, warehouse information, and other pawnshop settings.
 
-Add your content here.
 
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+= Feature =
+* Can save customer data, loan information, buy information, invoices, inventory information, and item information.
+* Has a list of reports as follows: 
+ # Accounting Reports
+ # Print Notices
+ # Print Gunbooks
+ # Customer Labels
+ # Expire Loans
+ # Buy Hold Stocking
+ # Active Loans
+ # Stock Items
+ # LAPD Records
+* The maintenance menu can do as follows: 
+ # Create a void, redeem and expire transactions
+ # Transfer Loan to a different customer
+ # Enter Next Numbers
+ # Create, Update, and Delete User Accounts
+ # Change Setup Fee Table
+ # Change Tax Fee Table
+ # Change Loan Interest Table
+* The Accounting Reports can report daily, monthly, yearly, and fiscal reports.
+* Inventory System can stock merchandise according to their categories including: 
+ # Transferring inventory to pawn
+ # Report a zero quantity inventory
