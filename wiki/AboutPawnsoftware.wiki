@@ -1,9 +1,9 @@
 #labels Featured
-= Introduction =
+== Introduction ==
 Pawnsoftware is a java written software that manages customers information, pawn information, invoices, inventory, warehouse information, and other pawnshop settings.
 
 
-= Feature =
+== Feature ==
   * Can save customer data, loan information, buy information, invoices, inventory information, and item information.
   * Has a list of reports as follows: 
    # Accounting Reports
