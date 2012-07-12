@@ -1,0 +1,20 @@
+#labels Phase-Design
+#Wiki for Database and Needed Tables
+
+= Introduction =
+Pawnsoftware is a browser based pawnshop software. There is going to be one data for one company.
+
+==Features==
+  # Able to save the records for customers, transactions, reports, accounting totals, inventory. 
+  # Type of Transactions are the following:
+    * Buys
+    * Loans
+    * Sale
+    * Inventory Transfer
+  # List of Tables are the following: 
+    * Customers
+    * Transactions
+    * Transaction Detail
+    * Settings
+    * Pawn Table Rates
+    
