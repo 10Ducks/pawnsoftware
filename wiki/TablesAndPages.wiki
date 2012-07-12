@@ -19,5 +19,5 @@ Pawnsoftware is a browser based pawnshop software. There is going to be one data
     * Pawn Table Rates
   # List of Pages
     * Login
-    * Entry Screen: Pawn, Buy, Sale, Inventory Transfer, Item, Users, Categories, and Customers
+    * Entry Screen: Pawn, Buy, Sale, Inventory Transfer, Item, Users, Categories, Gun License, Customers, and Pawn Transaction Table
     * Reports: Accounting Reports, Loan Reports, Inventory Reports, LAPD Reports
