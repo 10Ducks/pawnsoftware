@@ -1,0 +1,47 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	text-align: center;
+}
+#login {
+	border: 1px solid #afafaf;
+	width: 300px;
+	margin: auto;
+	text-align: center;
+	border-radius: 5px;
+}
+#login.list {
+	border-collapse: collapse;
+}
+.row {
+	padding: 10px;
+}
+.wrapper {
+	border: 1px solid #afafaf;
+	width: 920px;
+	margin:auto;
+	min-height: 400px;
+	text-align: left;
+}
+.list {
+	border: 1px solid #afafaf;
+	border-collapse: collapse;
+	width: 900px;
+}
+.list caption {
+	font-weight: bold;
+	text-align: left;
+}
+.list td,.list th {
+	border: 1px solid #afafaf;
+	padding: 2px;
+}
+.list input[type='text'], .list input[type='password']{
+	border: 1px solid #afafaf;
+	padding: 3px;
+}
+.list input[type='submit'], .list input[type='button'] {
+	padding: 3px;
+}
