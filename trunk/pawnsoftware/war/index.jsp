@@ -15,14 +15,14 @@
   <body>
   	<div class="wrapper">
   		<div id="login">
-			<form method="post" action="dashboard.html">
-  				<table class="form">
+			<table class="form">
+				<form method="post" action="dashboard.html">
  					<caption>Login</caption>
 					<tr><td>Username</td><td><input type="text" name="username" value="" /></td></tr>
 					<tr><td>Password</td><td><input type="password" name="password" value="" /></td></tr>
-					<tr><td colspan="2"><input type="submit" value="submit" name="login"/></td></tr>
- 				</table>
-			</form>
+					<tr><td colspan="2"><input type="submit" value="Login" name="login"/></td></tr>
+ 				</form>
+			</table>
 		</div>
   	</div>
   </body>
