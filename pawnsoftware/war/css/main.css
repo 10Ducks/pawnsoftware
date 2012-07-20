@@ -1,29 +1,49 @@
 * {
 	margin: 0px;
 	padding: 0px;
+	font-family: Arial, Helvetica, sans-serif;
 }
 body {
 	text-align: center;
 }
+.wrapper {
+	border: 0px solid #afafaf;
+	width: 1020px;
+	margin: 10px auto;
+	min-height: 400px;
+	text-align: left;
+}
+#nav {
+	float: left;
+	list-style-type: none;
+	clear: both;
+	width: 100%;
+	padding: 5px 0 20px 0;
+}
+#nav li {
+	float: left;
+}
+#nav li a {
+	padding: 5px;
+	text-decoration: none;
+}
+
 #login {
 	border: 1px solid #afafaf;
-	width: 300px;
-	margin: auto;
+	width: 250px;
+	margin: 50px auto;
+	padding: 10px;
 	text-align: center;
 	border-radius: 5px;
+}
+table.form {
+	width: 100px;
 }
 #login.list {
 	border-collapse: collapse;
 }
 .row {
 	padding: 10px;
-}
-.wrapper {
-	border: 1px solid #afafaf;
-	width: 920px;
-	margin:auto;
-	min-height: 400px;
-	text-align: left;
 }
 .list {
 	border: 1px solid #afafaf;
@@ -38,10 +58,10 @@ body {
 	border: 1px solid #afafaf;
 	padding: 2px;
 }
-.list input[type='text'], .list input[type='password']{
+input[type='text'],input[type='password']{
 	border: 1px solid #afafaf;
 	padding: 3px;
 }
-.list input[type='submit'], .list input[type='button'] {
-	padding: 3px;
+input[type='submit'],input[type='button'] {
+	padding: 3px 10px;
 }
