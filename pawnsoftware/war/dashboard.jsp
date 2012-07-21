@@ -20,7 +20,8 @@
 			$("#reports").tabs();
 			$("#setting").tabs();
 			
-			$("print-day-report").button();
+			// Dashboard
+			$("#day-report").button();
 			
 			// Customer
 			$("#customer-search").button();
@@ -51,10 +52,11 @@
 			$("#sale-reset").button();
 			
 			// Administration
-			$("data-purge").button();
-			$("file-sizes").button();
-			$("error-logs").button();
-			$("help-messages").button();
+			$("#data-purge").button();
+			$("#data-purge").button();
+			$("#file-sizes").button();
+			$("#error-logs").button();
+			$("#help-messages").button();
 		});
 	</script>
 	</head>
