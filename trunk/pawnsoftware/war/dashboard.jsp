@@ -8,19 +8,21 @@
 	<script type="text/javascript" src="js/jquery-ui-1.8.21.custom.min.js"></script>
 	<script type="text/javascript">
 		$(function() {
-			$("#tabs").tabs();
+			$("#screens").tabs();
+			$("#transactions").tabs();
 		});
 	</script>
 	</head>
 	<body>
 		<div class="wrapper">
-			<div id="tabs">
+			<div id="screens">
 				<ul>
 					<li><a href="#dashboard">Dashboard</a></li>
-					<li><a href="#entryScreen">Entry Screen</a></li>
-					<li><a href="#reportMenu">Report Menu</a></li>
+					<li><a href="#entry-screen">Entry Screen</a></li>
+					<li><a href="#report-menu">Report Menu</a></li>
 					<li><a href="#settings">Settings</a></li>
 				</ul>
+				
 				<div id="dashboard">
 					<div class="row">
 						<table class="list">
@@ -52,8 +54,73 @@
 							<tr><th>Layaway</th><td></td><td></td></tr>
 						</table>
 					</div>
-				</div>
-			</div><!-- #tabs -->
-		</div><!-- .wrapper -->
+				</div><!-- #dashboard -->
+				
+				<div id="entry-screen">
+					<h3>Customer Information</h3>
+					
+					<table class="list">
+						<tr><th>First Name</th><th>Last Name</th></tr>
+						<tr><td></td><td></td></tr>
+					</table>
+					<table class="list">
+						<tr><th>Remarks</th></tr>
+						<tr><td></td></tr>
+					</table>
+					<table class="list">
+						<tr><th>Address</th><th>City</th><th>State</th><th>Zip Code</th></tr>
+						<tr><td></td><td></td><td></td><td></td></tr>
+					</table>
+					<table class="list">
+						<tr><th>License</th><th>State Issued</th><th>Expiration Date</th><th>Birthdate</th></tr>
+						<tr><td></td><td></td><td></td><td></td></tr>
+					</table>
+					<table class="list">
+						<tr><th>Sex</th><th>Hair</th><th>Eyes</th><th>Height</th><th>Weight</th><th>Race</th></tr>
+						<tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					</table>
+					
+					<div id="transactions">
+						<ul>
+							<li><a href="#loans">Loans</a></li>
+							<li><a href="#buys">Buys</a></li>
+							<li><a href="#sales">Sales</a></li>
+							<li><a href="#inventory">Inventory</a></li>
+							<li><a href="#all-transactions">All Transactions</a></li>
+						</ul>
+						
+						<div id="loans">
+							Loans
+						</div><!-- #loans -->
+						
+						<div id="buys">
+							Buys
+						</div><!-- #loans -->
+						
+						<div id="sales">
+							Sales
+						</div><!-- #sales -->
+						
+						<div id="inventory">
+							Inventory
+						</div><!-- #loans -->
+						
+						<div id="all-transactions">
+							All Transactions
+						</div><!-- #loans -->
+					</div>
+				
+				</div><!-- #entry-screen -->
+				
+				<div id="report-menu">
+					Report Menu
+				</div><!-- #report-menu -->
+				
+				<div id="settings">
+					Settings
+				</div><!-- #dashboard -->
+				
+			</div>
+		</div>
 	</body>
 </html>
