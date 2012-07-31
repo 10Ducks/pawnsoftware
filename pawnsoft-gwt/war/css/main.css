@@ -3,6 +3,17 @@
 	padding: 0px;
 }
 .wrapper {
-	width: 
+	width: 940px;
+	min-height: 500px;
+	margin: auto;
 	border: 1px solid #afafaf;
+}
+#header {
+	background-color: #afafaf;
+}
+#content {
+	background-color: #efefef;
+}
+#footer {
+	background-color: #9f9f9f;
 }
