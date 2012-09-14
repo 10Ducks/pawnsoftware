@@ -15,7 +15,7 @@ public class NamespaceFilter implements javax.servlet.Filter {
 	public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException {
 	  // Make sure set() is only called if the current namespace is not already set.
 	  if (NamespaceManager.get() == null) {
-	    NamespaceManager.set(NamespaceManager.getGoogleAppsNamespace());
+	    NamespaceManager.set("cindyspawn");
 	  }
 	}
 
