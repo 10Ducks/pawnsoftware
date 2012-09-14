@@ -16,14 +16,6 @@
 		<h3>Create Company</h3>
 		<form method="post" action="company">
 		<table class="form">
-				<tr>
-					<td>Select Company</td>
-					<td>
-						<select name="companies">
-							<option value=""></option>
-						</select>
-					</td>
-				</tr>
 				<tr><td>Company Name</td><td><input type="text" name="companyName" value="" /></td></tr>
 				<tr><td>Description</td><td><textarea name="companyDescription" value=""></textarea></td></tr>
 				<tr><td colspan="2"><input type="submit" value="Save" name="saveCompany"/></td></tr>
