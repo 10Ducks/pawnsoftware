@@ -27,5 +27,7 @@ public class Company {
 	public static Iterable<Entity> getAllCompanies(String kind) {
 	    return Storage.listEntities(kind, null, null);
 	}
+	
+	
 
 }
