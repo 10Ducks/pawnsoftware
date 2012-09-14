@@ -9,39 +9,26 @@
 
 <html>
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>Pawnsoftware</title>
-	<link type="text/css" href="css/main.css" rel="stylesheet" />
-	<link type="text/css" href="css/redmond/jquery-ui-1.8.21.custom.css" rel="stylesheet" />
-	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
-	<script type="text/javascript" src="js/jquery-ui-1.8.21.custom.min.js"></script>
-	<script type="text/javascript">
-			$(function() {
-				$( "#login" ).dialog({
-					draggable: false, 
-					resizable: false,
-					disabled: false,
-					position: "top",
-					position: [500,50],
-					title: "Login",
-					stack: false,
-					dialogClass: "alert",
-				});
-				$(".ui-dialog-titlebar-close").hide();
-			});
-	</script>
   </head>
   <body>
-  	<div class="wrapper">
-  		<div id="login">
-			<table class="form">
-				<form method="post" action="dashboard.html">
-					<tr><td>Username</td><td><input type="text" name="username" value="" /></td></tr>
-					<tr><td>Password</td><td><input type="password" name="password" value="" /></td></tr>
-					<tr><td colspan="2"><input type="submit" value="Login" name="login"/></td></tr>
- 				</form>
-			</table>
-		</div>
-  	</div>
+  	<h1></h1>
+		<h3>Create Company</h3>
+		<form method="post" action="company">
+		<table class="form">
+				<tr>
+					<td>Select Company</td>
+					<td>
+						<select name="companies">
+							<option value=""></option>
+						</select>
+					</td>
+				</tr>
+				<tr><td>Company Name</td><td><input type="text" name="companyName" value="" /></td></tr>
+				<tr><td>Description</td><td><textarea name="companyDescription" value=""></textarea></td></tr>
+				<tr><td colspan="2"><input type="submit" value="Save" name="saveCompany"/></td></tr>
+		</table>
+		</form>
   </body>
 </html>
+
