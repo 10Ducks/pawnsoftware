@@ -1,24 +1,18 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
-<!-- above set at the top of the file will set     -->
-<!-- the browser's rendering engine into           -->
-<!-- "Quirks Mode". Replacing this declaration     -->
-<!-- with a "Standards Mode" doctype is supported, -->
-<!-- but may lead to some differences in layout.   -->
-
+<!DOCTYPE HTML>
 <html>
   <head>
     <title>Pawnsoftware</title>
   </head>
   <body>
-  	<h1></h1>
-		<h3>Create Company</h3>
-		<form method="post" action="company">
+  	<h1>Pawnsoftware</h1>
+		<h3>Login</h3>
+		<form method="post" action="user/login">
 		<table class="form">
-				<tr><td>Company Name</td><td><input type="text" name="companyName" value="" /></td></tr>
-				<tr><td>Description</td><td><textarea name="companyDescription" value=""></textarea></td></tr>
-				<tr><td colspan="2"><input type="submit" value="Save" name="saveCompany"/></td></tr>
+			<tr><td>Username</td><td><input type="text" name="username" /></td></tr>
+			<tr><td>Password</td><td><input type="password" name="password" /></td></tr>
+			<tr><td colspan="2"><input type="submit" value="login" name="login" /> 
+				<a href="form/user/create">Create New User</a>
+			</td></tr>
 		</table>
 		</form>
   </body>
