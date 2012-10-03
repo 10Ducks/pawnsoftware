@@ -21,7 +21,12 @@ public class UserLoginServlet extends HttpServlet {
 		String password = req.getParameter("password");
 		out.println(username);
 		out.println(password);
-		String message = User.authenticate(username, password);
+		String message="";
+		if (username.equals("") || password.equals("")) {
+			message = "Don\'t leave any field blank.";
+		} else {
+			message = User.authenticate(username, password);
+		}
 		out.print(message);
 		//res.sendRedirect("/index.jsp");
 	}	
