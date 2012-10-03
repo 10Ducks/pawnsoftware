@@ -5,17 +5,30 @@ import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
+import com.google.appengine.api.datastore.Entity;
+
 public class User {
 	
 	// Authenticate user
 	public static String authenticate(String username, String password) {
 		String message;
+		Entity user = UserUtil.findUserEntity(username);
 		password = encrypt(password);
-		if (username.equals("franz") && password.equals("33037d1d2dd1a6b1e6a1929d8492b89996e01d6")) {
+		String pass = "";	
+			try {
+				pass = user.getProperty("password").toString();
+			} catch (NullPointerException e) {
+				message = "Username not found.";
+			}
+		if (user==null) {
+			message = "Username not found.";
+		} else if (user!=null && !password.equals(pass)) {
+			message = "Password is incorrect.";
+		} else if (user!=null && password.equals(pass)) {
 			message = "Successfully logged in!";
 		} else {
-			message = "Sorry, username and password did not match.";
-		}
+			message = "Sorry, cannot find the username and password.";
+		} 
 		return message;
 	}
 	
