@@ -23,7 +23,7 @@ public class UserLoginServlet extends HttpServlet {
 		out.println(password);
 		String message = User.authenticate(username, password);
 		out.print(message);
-		res.sendRedirect("/index.jsp");
+		//res.sendRedirect("/index.jsp");
 	}	
 	
 }

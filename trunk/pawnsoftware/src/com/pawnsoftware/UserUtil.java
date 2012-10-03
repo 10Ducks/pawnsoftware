@@ -7,10 +7,11 @@ import com.google.appengine.api.datastore.Entity;
 class UserUtil {
 	private static DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();  
 	
-	public static void createUser(String username, String password) {
+	public static String createUser(String username, String password) {
 		Entity user = new Entity("User",username);
 		user.setProperty("password", password);
 		datastore.put(user);
-		
+		String message = "Successfully created a user.";
+		return message;
 	}
 }
