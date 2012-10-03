@@ -20,9 +20,7 @@ public class User {
 			} catch (NullPointerException e) {
 				message = "Username not found.";
 			}
-		if (user==null) {
-			message = "Username not found.";
-		} else if (user!=null && !password.equals(pass)) {
+		if (user!=null && !password.equals(pass)) {
 			message = "Password is incorrect.";
 		} else if (user!=null && password.equals(pass)) {
 			message = "Successfully logged in!";
