@@ -9,38 +9,41 @@ import com.google.appengine.api.datastore.Entity;
 
 public class User {
 	
-	// Authenticate user
-	public static String authenticate(String username, String password) {
-		String message;
-		Entity user = UserUtil.findUserEntity(username);
-		password = encrypt(password);
-		String pass = "";	
-			try {
-				pass = user.getProperty("password").toString();
-			} catch (NullPointerException e) {
-				message = "Username not found.";
-			}
-		if (user!=null && !password.equals(pass)) {
-			message = "Password is incorrect.";
-		} else if (user!=null && password.equals(pass)) {
-			message = "Successfully logged in!";
-		} else {
-			message = "Sorry, cannot find the username and password.";
-		} 
-		return message;
-	}
-	
-	// Create a User entity
-	public static String create (String username, String password) throws NoSuchAlgorithmException, UnsupportedEncodingException {
-		password = encrypt(password);
-		String message = UserUtil.createUser(username, password);
-		return message;
-	}
-	
-	// Encrypt password
-	public static String encrypt(String password) {
-        MessageDigest md = null;
+    // Authenticate user
+    public static Boolean authenticate(String username, String password) {
+        Entity user = UserUtil.findUserEntity(username);
+        password = encrypt(password);
+        String pass = "";
         try {
+            pass = user.getProperty("password").toString();
+        } catch (NullPointerException e) {
+            return false; // loginStatus: 2	
+            //message = "Username not found!";
+        }
+        // Start authentication
+        if (user!=null && !password.equals(pass)) {
+            return false; // loginStatus: 3
+            //message = "Password is incorrect";
+        } else if (user!=null && password.equals(pass)) {
+            return true; // loginStatus: 1
+        	//message = "Successfully logged in";
+        } else {
+            return false; // loginStatus: 4
+        	//message = "Sorry, can not find the username and password";
+        } 
+    }
+    
+    // Create a User entity
+    public static String create (String username, String password) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+    	password = encrypt(password);
+    	String message = UserUtil.createUser(username, password);
+    	return message;
+    }
+        
+    // Encrypt password
+    public static String encrypt(String password) {
+    	MessageDigest md = null;
+    	try {
             md = MessageDigest.getInstance("SHA");
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
@@ -48,6 +51,19 @@ public class User {
         md.update(password.getBytes(),0,password.length());
         String md5 = new BigInteger(1,md.digest()).toString(16);
         return md5;
-	}
-	
+    }
+    
+    public static String userLoginMessages(int loginStatus) {
+    	String message = "";
+    	switch(loginStatus) { 
+    		case 0: message = "Please don\'t leave the fields blank."; break;
+    		case 1: message = "Successfully logged in!"; break;
+    		case 2: message = "Username not found!"; break;
+    		case 3: message = "Password is incorrect"; break;
+    		case 4: message = "Sorry, can not find the username and password"; break;
+    		case 5: message = "Sorry, can not login. "; break;
+    	}
+    	return message;
+    }
+    
 }
