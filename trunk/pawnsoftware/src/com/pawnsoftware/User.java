@@ -33,6 +33,11 @@ public class User {
         } 
     }
     
+    public static void getUsername() {
+    	
+    }
+        
+        
     // Create a User entity
     public static String create (String username, String password) throws NoSuchAlgorithmException, UnsupportedEncodingException {
     	password = encrypt(password);

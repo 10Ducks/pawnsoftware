@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<title>Create User</title>
+		<link rel="stylesheet" type="text/css" href="../../css/main.css" />
 	</head>
 	<body>
 		<h1>Pawnsoftware</h1>
