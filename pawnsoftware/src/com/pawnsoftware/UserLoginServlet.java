@@ -21,8 +21,7 @@ public class UserLoginServlet extends HttpServlet {
 		String username = req.getParameter("username");
 		String password = req.getParameter("password");
 		String userSessionId = getUserSessionId(req, username, password);
-		out.println(username);
-		out.println(password);
+		//out.println(username + " " + password);
 		out.println(userSessionId);
 		//res.sendRedirect("/index.jsp");
 	}
