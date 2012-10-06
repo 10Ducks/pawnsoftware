@@ -7,7 +7,7 @@
 	<body>
 		<h1>Pawnsoftware</h1>
 		<h2>Create Customer</h2>
-		<h3>Customer Information</h3>
+		<a href="../../../">Logout</a>
 		<table id="customer-info">
 			<tr><td>First Name</td><td><input type="text" value="" name="firstname"></td></tr>
 			<tr><td>Last Name</td><td><input type="text" value="" name="firstname"></td></tr>

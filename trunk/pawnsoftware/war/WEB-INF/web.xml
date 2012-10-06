@@ -28,6 +28,15 @@
 		<url-pattern>/search/*</url-pattern>
 	</servlet-mapping>
 	
+	<!--  Search JSPs -->
+	<servlet>
+		<servlet-name>formSearch</servlet-name>
+		<jsp-file>/form-search.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>formSearch</servlet-name>
+		<url-pattern>/form/search-page/*</url-pattern>
+	</servlet-mapping>
 	<!-- User JSPs -->
 	<servlet>
 		<servlet-name>formUserCreate</servlet-name>
