@@ -6,8 +6,8 @@
 	</head>
 	<body>
 		<h1>Pawnsoftware</h1>
-		<h2>Create Customer</h2>
-		<h3>Customer Address</h3>
+		<h2>Customer Address</h2>
+		<a href="../customer/create">Go Back</a>
 		<table id="customer-address">
 			<tr><td>Address</td><td><input type="text" value="" name="race"></td></tr>
 			<tr><td>City</td><td><input type="text" value="" name="race"></td></tr>

@@ -17,6 +17,11 @@
 			</td></tr>
 		</table>
 		</form>
+		<h3>Pages</h3>
+		<ul>
+			<li><a href="/form/search">Search</a></li>
+			<li><a href="/form/customer/create">Customer</a></li>
+		</ul>
   </body>
 </html>
 

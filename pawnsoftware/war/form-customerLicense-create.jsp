@@ -6,8 +6,8 @@
 	</head>
 	<body>
 		<h1>Pawnsoftware</h1>
-		<h2>Create Customer</h2>
-		<h3>Customer License</h3>
+		<h2>Customer License</h2>
+		<a href="../customer/create">Go Back</a>
 		<table id="customer-license">
 			<tr><td>License</td><td><input type="text" value="" name="race"></td></tr>
 			<tr><td>State Issued</td><td><input type="text" value="" name="state"></td></tr>
