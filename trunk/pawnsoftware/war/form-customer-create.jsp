@@ -8,7 +8,7 @@
 	<body>
 		<h1>Pawnsoftware</h1>
 		<h2>Create Customer</h2>
-		<a href="../../">Logout</a>
+		<a href="../customer/list">Go Back</a>
 		<form method="post" action="/customer">
 			<table id="customer-info">
 				<tr><td>License</td><td><input type="text" value="" name="license"></td></tr>

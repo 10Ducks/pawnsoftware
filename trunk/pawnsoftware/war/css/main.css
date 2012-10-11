@@ -23,15 +23,24 @@
 #nav>li>ul>li>a:hover {
 	text-decoration: underline;
 }
-input[type="submit"], input[type="text"] {
+
+/********* Input Fields ************/
+input[type="submit"], input[type="text"], textarea {
 	padding: 3px;
 }
 
 table {
 	border-collapse: collapse;
-	border: 1px solid #afafaf;
 	margin: 2px;
+	padding: 2px;
 }
 table td {
-	padding: 5px;
+	border: 1px solid #afafaf;
+	padding: 2px;
+	
+}
+table th {
+	border: 1px solid #afafaf;
+	text-align: left;
+	padding: 3px;
 }

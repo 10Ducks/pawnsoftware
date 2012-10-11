@@ -51,6 +51,15 @@
 		
 	<!--  Customer JSPs -->
 	<servlet>
+		<servlet-name>formCustomerList</servlet-name>
+		<jsp-file>/form-customer-list.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>formCustomerList</servlet-name>
+		<url-pattern>/customer/list/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
 		<servlet-name>formCustomerCreate</servlet-name>
 		<jsp-file>/form-customer-create.jsp</jsp-file>
 	</servlet>
