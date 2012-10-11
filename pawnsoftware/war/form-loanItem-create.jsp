@@ -2,36 +2,78 @@
 <html>
 	<head>
 		<title>Create Loans</title>
-		<link rel="stylesheet" type="text/css" href="" />
+		<link rel="stylesheet" type="text/css" href="../css/main.css" />
 	</head>
 	<body>
 		<h1>Pawnsoftware</h1>
 		<h2>Create Loans</h2>
+		<a href="../">Go Back</a>
 		<form method="post" action="loan">
 			<table>
-				<tr><td>Loan No</td><td><input type="text" name="loanNo" value=""/></td></tr>
-				<tr><td>Original No</td><td><input type="text" name="originalNo" value=""/></td></tr>
-				<tr><td>Next No</td><td><input type="text" name="nextNo" value=""/></td></tr>
-				<tr><td>Previous No</td><td><input type="text" name="previousNo" value=""/></td></tr>
-				<tr><td>Date Created</td><td><input type="text" name="dateCreated" value=""/></td></tr>
-				<tr><td>Expiration Date</td><td><input type="text" name="expiration" value=""/></td></tr>
-				<tr><td>Notice Sent</td><td><input type="text" name="noticeSent" value=""/></td></tr>
-				<tr><td>Forfeit Date</td><td><input type="text" name="ForfeitDate" value=""/></td></tr>
-				<tr><td>Last Activity</td><td><input type="text" name="lastActivity" value=""/></td></tr>
-				<tr><td>Description</td><td><input type="text" name="description" value=""/></td></tr>
-				<tr><td>Extended</td><td><input type="text" name="isExtended" value=""/></td></tr>
-				<tr><td>Brand</td><td><input type="text" name="brand" value=""/></td></tr>
-				<tr><td>Serial No.</td><td><input type="text" name="serialNo" value=""/></td></tr>
-				<tr><td>Model No</td><td><input type="text" name="modelNo" value=""/></td></tr>
-				<tr><td>Warehouse Location</td><td><input type="text" name="warehouseLocation" value=""/></td></tr>
-				<tr><td>Caliber</td><td><input type="text" name="caliber" value=""/></td></tr>
-				<tr><td>Type</td><td><input type="text" name="type" value=""/></td></tr>
-				<tr><td>Action</td><td><input type="text" name="action" value=""/></td></tr>
-				<tr><td>Status</td><td><input type="text" name="status" value=""/></td></tr>
-				<tr><td>Gun Importer</td><td><input type="text" name="gunImporter" value=""/></td></tr>
-				<tr><td>In Premises</td><td><input type="text" name="inPremises" value=""/></td></tr>
-				<tr><td>Not Lost</td><td><input type="text" name="notLost" value=""/></td></tr>
-				<tr><td>Miscellaneous</td><td><input type="text" name="miscellaneous" value=""/></td></tr>
+				<tr>
+					<th>Date Created</th>
+					<th>Expiration Date</th>
+					<th>Notice Sent</th>
+					<th>Forfeit Date</th>
+					<th>Last Activity</th>
+					<th></th>
+				</tr>
+				<tr>
+					<td><input type="text" name="dateCreated" value=""/></td>
+					<td><input type="text" name="expiration" value=""/></td>
+					<td><input type="text" name="noticeSent" value=""/></td>
+					<td><input type="text" name="ForfeitDate" value=""/></td>
+					<td><input type="text" name="lastActivity" value=""/></td>
+				</tr>
+			</table>
+			<table>
+				<tr><th>Original Number</th><th>Previous Number</th><th>Loan Number</th><th>Next Number</th></tr>
+				<tr>
+					<td><input type="text" name="originalNumber" value=""/></td>
+					<td><input type="text" name="previousNumber" value=""/></td>
+					<td><input type="text" name="loanNumber" value=""/></td>
+					<td><input type="text" name="nextNumber" value=""/></td>
+				</tr>
+			</table>
+			<table>
+				<tr><th>Description</th><th>Amount</th><td><input type="text" value="" name="amount" /></td></tr>
+				<tr>
+					<td rowspan="6"><textarea name="description" cols="75" rows="10"></textarea></td>
+					<th>Setup</th>
+					<td><input type="text" value="" name="setup" /></td>
+				</tr>
+				<tr><th>Fire/Misc</th><td><input type="text" value="" name="fireMisc" /></td></tr>
+				<tr><th>Interest</th><td><input type="text" value="" name="interest" /></td></tr>
+				<tr><th>Not Lost</th><td><input type="text" name="notLost" value=""/></td></tr>
+				<tr><th>Miscellaneous</th><td><input type="text" name="miscellaneous" value=""/></td></tr>
+				<tr><th>Total</th><td><input type="text" value="" name="total" /></td></tr>
+			</table>
+			<table>
+				<tr><th>Caliber</th><th>Type</th><th>Action</th><th>Status</th><th>Gun Importer</th></tr>
+				<tr>
+					<td><input type="text" name="gunCaliber" value=""/></td>
+					<td><input type="text" name="gunType" value=""/></td>
+					<td><input type="text" name="gunAction" value=""/></td>
+					<td><input type="text" name="gunStatus" value=""/></td>
+					<td><input type="text" name="gunImporter" value=""/></td>
+				</tr>
+			</table>
+			<table>
+				<tr><th>Brand No.</th><th>Serial No.</th><th>Model No</th></tr>
+				<tr>
+					<td><input type="text" name="brand" value=""/></td>
+					<td><input type="text" name="serialNo" value=""/></td>
+					<td><input type="text" name="modelNo" value=""/></td>
+				</tr>
+			</table>
+			<table>
+				<tr><th>Warehouse Location</th><th>In Premises</th><th>Extended</th><th>Status</th></tr>
+				<tr>
+					<td><input type="text" name="warehouseLocation" value=""/></td>
+					<td><input type="text" name="inPremises" value=""/></td>
+					<td><input type="text" name="isExtended" value=""/></td>
+					<td><input type="text" name="status" value=""/></td>
+				</tr>
 			</table>
 			<table>
 				<tr><td colspan="2"><input type="submit" name="loan-create" value="Create Customer Loan" /></td></tr>

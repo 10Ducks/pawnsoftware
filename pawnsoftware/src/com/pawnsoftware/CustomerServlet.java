@@ -26,7 +26,7 @@ public class CustomerServlet extends HttpServlet {
 		CustomerBio.setBio(license, sex, hair, eyes, height, weight, race);
 		
 		PrintWriter out = res.getWriter();
-		out.print("Hello");
+		out.print("");
 		res.sendRedirect("/customer/create");
 	}
 	

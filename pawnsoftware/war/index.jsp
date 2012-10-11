@@ -10,7 +10,7 @@
 		<ul id="nav">
 			<li>Entry Screen
 				<ul>
-					<li><a href="/customer/create">Customer</a></li>
+					<li><a href="/customer/list">Customer</a></li>
 					<li><a href="/loan-item/create">Loan</a></li>
 					<li><a href="/buy-item/create">Buy</a></li>
 					<li><a href="/inventory-item/create">Inventory</a></li>
