@@ -17,6 +17,9 @@
 #nav>li>a {
 	border: 1px solid #afafaf;
 }
+input[type="submit"], input[type="text"] {
+	padding: 3px;
+}
 
 table {
 	border-collapse: collapse;
