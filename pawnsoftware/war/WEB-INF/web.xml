@@ -27,62 +27,51 @@
 		<servlet-name>CustomerAddress</servlet-name>
 		<url-pattern>/customer-address/*</url-pattern>
 	</servlet-mapping>
-		
 			
-	<!--  Search JSPs -->
-	<servlet>
-		<servlet-name>formSearch</servlet-name>
-		<jsp-file>/form-search.jsp</jsp-file>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>formSearch</servlet-name>
-		<url-pattern>/search-page/*</url-pattern>
-	</servlet-mapping>
-	
 	<!-- Item JSPs -->
 	<servlet>
-		<servlet-name>formLoanItemCreate</servlet-name>
+		<servlet-name>LoanItemCreate</servlet-name>
 		<jsp-file>/form-loanItem-create.jsp</jsp-file>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>formLoanItemCreate</servlet-name>
-		<url-pattern>/loan-item/create/*</url-pattern>
+		<servlet-name>LoanItemCreate</servlet-name>
+		<url-pattern>/loan_item/create/*</url-pattern>
 	</servlet-mapping>
 		
 	<!--  Customer JSPs -->
 	<servlet>
-		<servlet-name>formCustomerList</servlet-name>
-		<jsp-file>/form-customer-list.jsp</jsp-file>
+		<servlet-name>CustomerList</servlet-name>
+		<jsp-file>/customer-list.jsp</jsp-file>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>formCustomerList</servlet-name>
+		<servlet-name>CustomerList</servlet-name>
 		<url-pattern>/customer/list/*</url-pattern>
 	</servlet-mapping>
 	
 	<servlet>
-		<servlet-name>formCustomerCreate</servlet-name>
-		<jsp-file>/form-customer-create.jsp</jsp-file>
+		<servlet-name>CustomerCreate</servlet-name>
+		<jsp-file>/customer-create.jsp</jsp-file>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>formCustomerCreate</servlet-name>
+		<servlet-name>CustomerCreate</servlet-name>
 		<url-pattern>/customer/create/*</url-pattern>
 	</servlet-mapping>
 	
 	<servlet>
-		<servlet-name>formCustomerAddressCreate</servlet-name>
-		<jsp-file>/form-customerAddress-create.jsp</jsp-file>
+		<servlet-name>CustomerAddressCreate</servlet-name>
+		<jsp-file>/customerAddress-create.jsp</jsp-file>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>formCustomerAddressCreate</servlet-name>
+		<servlet-name>CustomerAddressCreate</servlet-name>
 		<url-pattern>/customer-address/create/*</url-pattern>
 	</servlet-mapping>
 	
 	<servlet>
-		<servlet-name>formCustomerLicenseCreate</servlet-name>
-		<jsp-file>/form-customerLicense-create.jsp</jsp-file>
+		<servlet-name>CustomerLicenseCreate</servlet-name>
+		<jsp-file>/customerLicense-create.jsp</jsp-file>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>formCustomerLicenseCreate</servlet-name>
+		<servlet-name>CustomerLicenseCreate</servlet-name>
 		<url-pattern>/customer-license/create/*</url-pattern>
 	</servlet-mapping>
 	
