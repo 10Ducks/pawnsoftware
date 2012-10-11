@@ -1,33 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?><web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">	
 
-	<!-- User -->
+	<!-- Customer -->
 	<servlet>
-		<servlet-name>userLogin</servlet-name>
-		<servlet-class>com.pawnsoftware.UserLoginServlet</servlet-class>
+		<servlet-name>Customer</servlet-name>
+		<servlet-class>com.pawnsoftware.CustomerServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>userLogin</servlet-name>
-		<url-pattern>/user/login/*</url-pattern>
+		<servlet-name>Customer</servlet-name>
+		<url-pattern>/customer/*</url-pattern>
 	</servlet-mapping>
-	<servlet>
-		<servlet-name>userCreate</servlet-name>
-		<servlet-class>com.pawnsoftware.UserCreateServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>userCreate</servlet-name>
-		<url-pattern>/user/create/*</url-pattern>
-	</servlet-mapping>
-	
-	<!-- Search -->
-	<servlet>
-		<servlet-name>search</servlet-name>
-		<servlet-class>com.pawnsoftware.SearchServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>search</servlet-name>
-		<url-pattern>/search/*</url-pattern>
-	</servlet-mapping>
-	
+		
 	<!--  Search JSPs -->
 	<servlet>
 		<servlet-name>formSearch</servlet-name>
@@ -35,16 +17,7 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>formSearch</servlet-name>
-		<url-pattern>/form/search-page/*</url-pattern>
-	</servlet-mapping>
-	<!-- User JSPs -->
-	<servlet>
-		<servlet-name>formUserCreate</servlet-name>
-		<jsp-file>/form-user-create.jsp</jsp-file>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>formUserCreate</servlet-name>
-		<url-pattern>/form/user/create/*</url-pattern>
+		<url-pattern>/search-page/*</url-pattern>
 	</servlet-mapping>
 	<!--  Customer JSPs -->
 	<servlet>
@@ -53,7 +26,7 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>formCustomerCreate</servlet-name>
-		<url-pattern>/form/customer/create/*</url-pattern>
+		<url-pattern>/customer/create/*</url-pattern>
 	</servlet-mapping>
 	
 	<servlet>
@@ -62,7 +35,7 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>formCustomerAddressCreate</servlet-name>
-		<url-pattern>/form/customer-address/create/*</url-pattern>
+		<url-pattern>/customer-address/create/*</url-pattern>
 	</servlet-mapping>
 	
 	<servlet>
@@ -71,7 +44,7 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>formCustomerLicenseCreate</servlet-name>
-		<url-pattern>/form/customer-license/create/*</url-pattern>
+		<url-pattern>/customer-license/create/*</url-pattern>
 	</servlet-mapping>
 	
 	<!--  Welcome file -->

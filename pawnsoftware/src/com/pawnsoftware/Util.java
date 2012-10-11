@@ -7,21 +7,17 @@ import com.google.appengine.api.datastore.EntityNotFoundException;
 import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.KeyFactory;
 
-class UserUtil {
+class Util {
 	private static DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();  
 	
-	public static String createUser(String username, String password) {
-		Entity user = new Entity("User",username);
-		user.setProperty("password", password);
-		datastore.put(user);
-		String message = "Successfully created a user.";
-		return message;
+	public static void persistEntity(Entity entity) {
+		datastore.put(entity);
 	}
-	
-	public static Entity findUserEntity (String username) {
-		Key userKey = KeyFactory.createKey("User", username);
+		
+	public static Entity findEntity (String entityName, String keyName) {
+		Key key = KeyFactory.createKey(entityName, keyName);
 	  	try {
-	  	  return datastore.get(userKey);
+	  	  return datastore.get(key);
 	  	} catch (EntityNotFoundException e) {
 	  	  return null;
 	  	}

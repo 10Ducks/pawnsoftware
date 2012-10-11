@@ -1,3 +1,23 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+#nav {
+	width: 100%;
+	float: left;
+	clear: both;
+	border: 1px solid #afafaf;
+}
+#nav>li {
+	list-style-type: none;
+	display: block;
+	float: left;
+	margin: 10px;
+}
+#nav>li>a {
+	border: 1px solid #afafaf;
+}
+
 table {
 	border-collapse: collapse;
 	border: 1px solid #afafaf;
