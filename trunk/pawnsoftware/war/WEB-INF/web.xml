@@ -38,6 +38,17 @@
 		<servlet-name>formSearch</servlet-name>
 		<url-pattern>/search-page/*</url-pattern>
 	</servlet-mapping>
+	
+	<!-- Item JSPs -->
+	<servlet>
+		<servlet-name>formLoanItemCreate</servlet-name>
+		<jsp-file>/form-loanItem-create.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>formLoanItemCreate</servlet-name>
+		<url-pattern>/loan-item/create/*</url-pattern>
+	</servlet-mapping>
+		
 	<!--  Customer JSPs -->
 	<servlet>
 		<servlet-name>formCustomerCreate</servlet-name>

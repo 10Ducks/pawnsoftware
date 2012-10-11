@@ -17,6 +17,12 @@
 #nav>li>a {
 	border: 1px solid #afafaf;
 }
+#nav>li>ul>li>a {
+	text-decoration: none;
+}
+#nav>li>ul>li>a:hover {
+	text-decoration: underline;
+}
 input[type="submit"], input[type="text"] {
 	padding: 3px;
 }
