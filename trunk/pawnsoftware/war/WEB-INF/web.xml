@@ -9,7 +9,26 @@
 		<servlet-name>Customer</servlet-name>
 		<url-pattern>/customer/*</url-pattern>
 	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>CustomerLicense</servlet-name>
+		<servlet-class>com.pawnsoftware.CustomerLicenseServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CustomerLicense</servlet-name>
+		<url-pattern>/customer-license/*</url-pattern>
+	</servlet-mapping>
 		
+	<servlet>
+		<servlet-name>CustomerAddress</servlet-name>
+		<servlet-class>com.pawnsoftware.CustomerAddressServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CustomerAddress</servlet-name>
+		<url-pattern>/customer-address/*</url-pattern>
+	</servlet-mapping>
+		
+			
 	<!--  Search JSPs -->
 	<servlet>
 		<servlet-name>formSearch</servlet-name>
