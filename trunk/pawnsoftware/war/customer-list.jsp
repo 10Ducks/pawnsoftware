@@ -12,7 +12,7 @@
 		<h1>Pawnsoftware</h1>
 		<h2>Customers</h2>
 		<a href="../">Go Back</a><br/>
-		<a href="../../customer/create">Customer Create</a>
+		<a href="../../customer/edit">Customer Create</a>
 		<table>
 			<tr><th>License</th><th>First Name</th><th>Last Name</th><th>Birthdate</th><th>Loans</th><th>Buys</th><th>Action</th></tr>
 			<tr><td></td><td></td><td></td><td></td><td></td><td></td><td><a href="../customer/delete">Edit</a> <a href="../customer/delete">Delete</a></td></tr>

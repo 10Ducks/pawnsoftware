@@ -11,10 +11,10 @@
 			<li>Entry Screen
 				<ul>
 					<li><a href="/customer/list">Customer</a></li>
-					<li><a href="/loan-item/create">Loan</a></li>
-					<li><a href="/buy-item/create">Buy</a></li>
-					<li><a href="/inventory-item/create">Inventory</a></li>
-					<li><a href="/sale/create">Sell</a></li>
+					<li><a href="/loan/edit">Loan</a></li>
+					<li><a href="/buy/edit">Buy</a></li>
+					<li><a href="/inventory/edit">Inventory</a></li>
+					<li><a href="/sale/edit">Sell</a></li>
 				</ul>
 			</li>
 			<li>Report</li>
