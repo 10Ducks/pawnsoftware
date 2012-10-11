@@ -30,12 +30,12 @@
 			
 	<!-- Item JSPs -->
 	<servlet>
-		<servlet-name>LoanItemCreate</servlet-name>
-		<jsp-file>/form-loanItem-create.jsp</jsp-file>
+		<servlet-name>LoanEdit</servlet-name>
+		<jsp-file>/loan-edit.jsp</jsp-file>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>LoanItemCreate</servlet-name>
-		<url-pattern>/loan_item/create/*</url-pattern>
+		<servlet-name>LoanEdit</servlet-name>
+		<url-pattern>/loan/edit/*</url-pattern>
 	</servlet-mapping>
 		
 	<!--  Customer JSPs -->
@@ -49,30 +49,30 @@
 	</servlet-mapping>
 	
 	<servlet>
-		<servlet-name>CustomerCreate</servlet-name>
-		<jsp-file>/customer-create.jsp</jsp-file>
+		<servlet-name>CustomerEdit</servlet-name>
+		<jsp-file>/customer-edit.jsp</jsp-file>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>CustomerCreate</servlet-name>
-		<url-pattern>/customer/create/*</url-pattern>
+		<servlet-name>CustomerEdit</servlet-name>
+		<url-pattern>/customer/edit/*</url-pattern>
 	</servlet-mapping>
 	
 	<servlet>
-		<servlet-name>CustomerAddressCreate</servlet-name>
-		<jsp-file>/customerAddress-create.jsp</jsp-file>
+		<servlet-name>CustomerAddressEdit</servlet-name>
+		<jsp-file>/customerAddress-Edit.jsp</jsp-file>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>CustomerAddressCreate</servlet-name>
-		<url-pattern>/customer-address/create/*</url-pattern>
+		<servlet-name>CustomerAddressEdit</servlet-name>
+		<url-pattern>/customer-address/edit/*</url-pattern>
 	</servlet-mapping>
 	
 	<servlet>
-		<servlet-name>CustomerLicenseCreate</servlet-name>
-		<jsp-file>/customerLicense-create.jsp</jsp-file>
+		<servlet-name>CustomerLicenseEdit</servlet-name>
+		<jsp-file>/customerLicense-edit.jsp</jsp-file>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>CustomerLicenseCreate</servlet-name>
-		<url-pattern>/customer-license/create/*</url-pattern>
+		<servlet-name>CustomerLicenseEdit</servlet-name>
+		<url-pattern>/customer-license/edit/*</url-pattern>
 	</servlet-mapping>
 	
 	<!--  Welcome file -->
