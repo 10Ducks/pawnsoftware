@@ -7,7 +7,7 @@
 	<body>
 		<h1>Pawnsoftware</h1>
 		<h2>Customer Address</h2>
-		<a href="../customer/create">Go Back</a>
+		<a href="../customer/edit">Go Back</a>
 		<form method="post" action="/customer-address">
 			<table id="customer-address">
 				<tr><td>License</td><td><input type="text" value="" name="license"></td></tr>
