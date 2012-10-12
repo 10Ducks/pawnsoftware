@@ -26,4 +26,9 @@ public class Customer {
 		return Util.findEntity(customerKey);
 	}
 	
+	public static Iterable<Entity> getAllCustomers(String kind) {
+		return Util.listEntities(kind, null, null);
+	}
+	
+	
 }
