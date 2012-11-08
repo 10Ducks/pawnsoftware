@@ -1,0 +1,39 @@
+Main Objects and Pages
+======================
+Customer
+Vendors
+
+Loans
+Inventory
+Invoices
+
+****** Unit ******
+Customer URLs
+-------------
+Customer List
+Customer Information
+Customer Transactions
+
+Vendor URLs
+-----------
+Vendor List
+Vendor Information
+Vendor Transactions
+
+****** Transactions ******
+
+Inventory URLs (should belong to pawnshop)
+--------------
+Inventory List
+Inventory Information
+
+Loan URLs (should belong to a customer)
+---------
+Loan List
+Loan Information
+
+Invoice URLs (should belong to a vendor)
+------------
+Invoice List
+Invoice Information
+

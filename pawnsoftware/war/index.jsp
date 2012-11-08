@@ -1,40 +1,24 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <title>Login</title>
-	<link rel="stylesheet" type="text/css" href="css/main.css" />
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/search.js"></script>
+    <title>Customer</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
   </head>
   <body>
-  	<h1>Pawnsoftware</h1>
-		<ul id="nav">
-			<li>Entry Screen
-				<ul>
-					<li><a href="/customer/list">Customer</a></li>
-					<li><a href="/loan/edit">Loan</a></li>
-					<li><a href="/buy/edit">Buy</a></li>
-					<li><a href="/inventory/edit">Inventory</a></li>
-					<li><a href="/sale/edit">Sell</a></li>
+  	<div class="container">
+  	<h2>Pawnsoftware</h2>
+		<div class="navbar">
+			<div class="navbar-inner">
+				<ul class="nav">
+					<li><a href="/customer">Customer</a></li>
+					<li><a href="/loan">Loans</a></li>
+					<li><a href="/inventory">Inventory</a></li>
+					<li><a href="/invoice">Invoices</a></li>
+					<li><a href="/vendor">Vendors</a></li>
 				</ul>
-			</li>
-			<li>Report</li>
-			<li>Settings</li>
-			<li>Inventory</li>
-		</ul>
-		<h2>Search</h2>
-		<form method="get" action="customer">
-		<table class="form">
-			<tr>
-				<td>Search</td>
-				<td>
-					<input onfocus="this.value='';this.style.color='black'" onblur="this.style.color='#afafaf';this.value='Type transaction number, customer name, or birthdate';" style="width:500px;padding:3px;color:#afafaf" type="text" name="search" value="Type transaction number, customer name, or birthdate" />
-					<input type="submit" onclick="search()" name="pli" value="Search" style="padding:3px;" />
-				</td>
-			</tr>
-		</table>
-		
-		</form>
+			</div>
+		</div>
+	</div>
   </body>
 </html>
 
