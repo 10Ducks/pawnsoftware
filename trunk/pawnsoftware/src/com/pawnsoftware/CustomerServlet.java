@@ -19,15 +19,15 @@ public class CustomerServlet extends HttpServlet {
 		String firstname = req.getParameter("firstname");
 		String lastname = req.getParameter("lastname");
 		String birthdate = req.getParameter("birthdate");
-		// CustomerBio
+		/* CustomerBio
 		String sex = req.getParameter("sex");
 		String hair = req.getParameter("hair");
 		String eyes = req.getParameter("eyes");
 		String height = req.getParameter("height");
 		String weight = req.getParameter("weight");
 		String race = req.getParameter("race");
+		*/
 		Customer.setCustomer(license, firstname, lastname, birthdate);
-		CustomerBio.setBio(license, sex, hair, eyes, height, weight, race);
 		res.sendRedirect("/edit");
 	}
 	

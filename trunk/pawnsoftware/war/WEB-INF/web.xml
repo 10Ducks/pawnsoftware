@@ -7,77 +7,59 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Customer</servlet-name>
-		<url-pattern>/customer/*</url-pattern>
+		<url-pattern>/customers/*</url-pattern>
 	</servlet-mapping>
 
-	<servlet>
-		<servlet-name>CustomerLicense</servlet-name>
-		<servlet-class>com.pawnsoftware.CustomerLicenseServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>CustomerLicense</servlet-name>
-		<url-pattern>/customer-license/*</url-pattern>
-	</servlet-mapping>
-		
-	<servlet>
-		<servlet-name>CustomerAddress</servlet-name>
-		<servlet-class>com.pawnsoftware.CustomerAddressServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>CustomerAddress</servlet-name>
-		<url-pattern>/customer-address/*</url-pattern>
-	</servlet-mapping>
-			
-	<!-- Item JSPs -->
-	<servlet>
-		<servlet-name>LoanEdit</servlet-name>
-		<jsp-file>/loan-edit.jsp</jsp-file>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>LoanEdit</servlet-name>
-		<url-pattern>/loan/edit/*</url-pattern>
-	</servlet-mapping>
-		
 	<!--  Customer JSPs -->
 	<servlet>
-		<servlet-name>CustomerList</servlet-name>
-		<jsp-file>/customer-list.jsp</jsp-file>
+		<servlet-name>Customer</servlet-name>
+		<jsp-file>/customer.jsp</jsp-file>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>CustomerList</servlet-name>
-		<url-pattern>/customer/list/*</url-pattern>
+		<servlet-name>Customer</servlet-name>
+		<url-pattern>/customer/*</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>CustomerInfo</servlet-name>
+		<jsp-file>/customer-info.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CustomerInfo</servlet-name>
+		<url-pattern>/customer-info/*</url-pattern>
 	</servlet-mapping>
 	
+	<!--  Vendor JSPs -->
 	<servlet>
-		<servlet-name>CustomerEdit</servlet-name>
-		<jsp-file>/customer-edit.jsp</jsp-file>
+		<servlet-name>Vendor</servlet-name>
+		<jsp-file>/vendor.jsp</jsp-file>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>CustomerEdit</servlet-name>
-		<url-pattern>/customer/edit/*</url-pattern>
+		<servlet-name>Vendor</servlet-name>
+		<url-pattern>/vendor/*</url-pattern>
 	</servlet-mapping>
 	
+	<!--  Loan JSPs -->
 	<servlet>
-		<servlet-name>CustomerAddressEdit</servlet-name>
-		<jsp-file>/customerAddress-Edit.jsp</jsp-file>
+		<servlet-name>Loan</servlet-name>
+		<jsp-file>/loan.jsp</jsp-file>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>CustomerAddressEdit</servlet-name>
-		<url-pattern>/customer-address/edit/*</url-pattern>
+		<servlet-name>Loan</servlet-name>
+		<url-pattern>/loan/*</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>LoanInfo</servlet-name>
+		<jsp-file>/loan-info.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoanInfo</servlet-name>
+		<url-pattern>/loan-info/*</url-pattern>
 	</servlet-mapping>
 	
-	<servlet>
-		<servlet-name>CustomerLicenseEdit</servlet-name>
-		<jsp-file>/customerLicense-edit.jsp</jsp-file>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>CustomerLicenseEdit</servlet-name>
-		<url-pattern>/customer-license/edit/*</url-pattern>
-	</servlet-mapping>
 	
 	<!--  Welcome file -->
 	<welcome-file-list>
-		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>customer.jsp</welcome-file>
 	</welcome-file-list>
 
  <servlet>
