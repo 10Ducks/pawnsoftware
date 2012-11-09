@@ -16,19 +16,22 @@ public class CustomerServlet extends HttpServlet {
 	
 	public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
 		String license = req.getParameter("license");
+		String stateIssued = req.getParameter("stateIssued");
+		String expirationYear = req.getParameter("expirationYear");
+		String birthdate = req.getParameter("birthdate");
 		String firstname = req.getParameter("firstname");
 		String lastname = req.getParameter("lastname");
-		String birthdate = req.getParameter("birthdate");
-		/* CustomerBio
-		String sex = req.getParameter("sex");
-		String hair = req.getParameter("hair");
-		String eyes = req.getParameter("eyes");
-		String height = req.getParameter("height");
-		String weight = req.getParameter("weight");
-		String race = req.getParameter("race");
-		*/
-		Customer.setCustomer(license, firstname, lastname, birthdate);
-		res.sendRedirect("/edit");
+		String address = req.getParameter("address");
+		String cityStateZip = req.getParameter("cityStateZip");
+		PrintWriter out = res.getWriter();
+		out.println(license);
+		out.println(stateIssued);
+		out.println(expirationYear);
+		out.println(birthdate);
+		out.println(firstname);
+		out.println(lastname);
+		out.println(address);
+		out.println(cityStateZip);
 	}
 	
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
