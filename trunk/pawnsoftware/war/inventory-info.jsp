@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <title>Loan Information</title>
+    <title>Inventory Information</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 	<link rel="stylesheet" type="text/css" href="css/main.css" />
 	<script type="text/javascript" src="js/jquery.js"></script>
@@ -45,13 +45,13 @@
 			</tbody>
 		</table>
 		<hr>
-		<h3>Loans</h3>
+		<h3>Inventory</h3>
 		<div class="btn-group">
-			<button class="btn btn-primary" onclick='window.location="/loan"'>Save Loans</button>
-			<button class="btn btn-default" onclick='reset()'>Reset</button>
+			<button class="btn btn-primary" onclick='window.location="/loan"'>Save Inventory</button>
+			<button class="btn btn-default">Reset</button>
 		</div>
 		<div class="btn-group">
-			<button class="btn btn-default" onclick='window.location="/inventory-info"'>Inventory Info</button>
+			<button class="btn btn-default" onclick='window.location="/loan-info"'>Loan Info</button>
 		</div>
 		<div class="row"><!-- Transaction -->	
 			<div class="span12">
@@ -59,69 +59,73 @@
 					<div class="span12">
 						<div class="row">
 							<div class="span2">
-								<label for="pawnbuy">Pawn or Buy</label>
-								<select class="span2" name="pawnbuy">
-									<option value="1">Pawn</option>
-									<option value="2">Buy</option>
-								</select>
+								<label for="stockNo">Stock No</label>
+								<input class="span2" disabled="disabled" type="text" name="stockNo" value=""/>
 							</div>
 							<div class="span2">
-								<label for="warehouseLocation">Warehouse Location</label>
-								<input class="span2" type="text" name="warehouseLocation" value=""/>
+								<label for="loanNo">Loan No</label>
+								<input class="span2" disabled="disabled" type="text" name="loanNo" value=""/>
 							</div>
 							<div class="span2">
-								<label for="extended">Is Extended</label>
-								<input class="span2" disabled="disabled" type="text" name="extended" value="No"/>
+								<label for="invoice">Invoice No</label>
+								<input class="span2" disabled="disabled" type="text" name="invoiceNo" value=""/>
 							</div>
-							<div class="span2">
-								<label for="premises">In Premises</label>
-								<input class="span2" disabled="disabled" type="text" name="premises" value="Yes"/>
-							</div>
-							<div class="span2">
-								<label for="status">Status</label>
-								<input class="span2" disabled="disabled" type="text" name="status" value="Inventory"/>
-							</div>
-						</div>
-						<!-- Info, Date, Loan -->
-						<div class="row">
 							<div class="span2">
 								<label for="transactionDate">Transaction Date</label>
 								<input class="span2" disabled="disabled" type="text" name="transactionDate" value=""/>
 							</div>
 							<div class="span2">
-								<label for="expirationDate">Expiration Date</label>
-								<input class="span2" type="text" disabled="disabled" name="expirationDate" value=""/>
-							</div>
-							<div class="span2">
-								<label for="forfeitDate">Forfeit Date</label>
-								<input class="span2" type="text" disabled="disabled" name="forfeitDate" value=""/>
-							</div>
-							<div class="span2">
 								<label for="lastActivityDate">Last Activity Date</label>
 								<input class="span2" type="text" disabled="disabled" name="lastActivityDate" value=""/>
 							</div>
+						</div>
+						<!-- Info, Date, Loan -->
+						<div class="row">
 							<div class="span2">
-								<label for="noticeSent">Notice Sent</label>
-								<input class="span2" type="text" disabled="disabled" name="lastActivityDate" value=""/>
+								<label for="label">Label</label>
+								<input class="span2" type="text" name="label" value=""/>
+							</div>
+							<div class="span2">
+								<label for="store">Store</label>
+								<input class="span2" type="text" name="store" value=""/>
+							</div>
+							<div class="span2">
+								<label for="type">Type</label>
+								<input class="span2" type="text" name="type" value=""/>
+							</div>
+							<div class="span2">
+								<label for="newused">New/Used</label>
+								<select class="span2" name="newused">
+									<option value="new">New</option>
+									<option selected="selected" value="used">Used</option>
+								</select>
+							</div>
+							<div class="span2">
+								<label for="status">Status</label>
+								<input class="span2" disabled="disabled" type="text" name="status" value=""/>
 							</div>
 						</div>
 						<!-- Loan Numbers -->
 						<div class="row">
-							<div class="span3">
-								<label for="currentLoan">Current Loan Number</label>
-								<input class="span3" disabled="disabled" type="text" name="currentLoan" value=""/>
+							<div class="span2">
+								<label for="karay">Karat</label>
+								<input class="span2" type="text" name="karat" value=""/>
 							</div>
 							<div class="span3">
-								<label for="origLoan">Original Loan</label>
-								<input class="span3" type="text" disabled="disabled" name="origLoan" value=""/>
+								<label for="dwt">Dead Weight Tonnage</label>
+								<input class="span3" type="text" name="dwt" value=""/>
 							</div>
 							<div class="span2">
-								<label for="prevLoan">Previous Loan</label>
-								<input class="span2" type="text" disabled="disabled" name="prevLoan" value=""/>
+								<label for="gms">Grams</label>
+								<input class="span2" type="text" name="gms" value=""/>
 							</div>
 							<div class="span2">
-								<label for="nextLoan">Next Loan</label>
-								<input class="span2" type="text" disabled="disabled" name="nextLoan" value=""/>
+								<label for="ozs">Ounces</label>
+								<input class="span2" type="text" name="ozs" value=""/>
+							</div>
+							<div class="span2">
+								<label for="cts">Counts</label>
+								<input class="span2" type="text" name="cts" value=""/>
 							</div>
 						</div>
 					</div>
@@ -133,8 +137,17 @@
 			<div class="span9">
 				<div class="row">
 					<div class="span12">
+						<label for="category">Category</label>
+						<select class="span4" name="category">
+							<option value="cat1">Category1</option>
+							<option value="cat2">Category2</option>
+							<option value="cat3">Category3</option>
+							<option value="cat4">Category4</option>
+						</select>
+					</div>
+					<div class="span12">
 						<label for="description">Description</label>
-						<textarea class="span9" rows="3" name="description"></textarea>
+						<textarea rows="3" class="span9" name="description"></textarea>
 					</div>
 				</div>
 				<div class="row">
@@ -170,32 +183,22 @@
 				<div class="span2">
 					<div class="input-prepend">
 						<span class="add-on">$</span>
-						<input name="loan" class="span2" id="loan" type="text" placeholder="Loan Amount">
+						<input name="cost" class="span2" id="cost" type="text" placeholder="Cost">
 					</div>
 					<div class="input-prepend">
 						<span class="add-on">$</span>
-						<input name="setup" class="span2" id="setup" type="text" placeholder="Setup Amount">
+						<input name="sprice" class="span2" id="sprice" type="text" placeholder="Special Price">
 					</div>
 					<div class="input-prepend">
 						<span class="add-on">$</span>
-						<input name="fire" class="span2" id="fire" type="text" placeholder="Misc Amount">
-					</div>
-					<div class="input-prepend">
-						<span class="add-on">$</span>
-						<input name="interest" class="span2" id="interest" type="text" placeholder="Interest Amount">
+						<input name="min" class="span2" id="min" type="text" placeholder="Minimum Amount">
 					</div>
 					<hr>
-					<div class="input-prepend">
-						<span class="add-on">$</span>
-						<input rows="10" name="interest" class="span2" id="total" type="text" placeholder="Total Amount">
-					</div>
+						<input rows="10" class="span2" name="quantity" class="span2" id="quantity" type="text" placeholder="Quantity">
 				</div>
 			</div><!--  Amount -->
 		</div>
 	</div>
-	<br/>
-	<br/>
-	<br/>
 	<br/>
 	<br/>
   </body>

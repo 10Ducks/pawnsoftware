@@ -2,15 +2,13 @@
 
 	<!-- Customer -->
 	<servlet>
-		<servlet-name>Customer</servlet-name>
+		<servlet-name>CustomerSave</servlet-name>
 		<servlet-class>com.pawnsoftware.CustomerServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>Customer</servlet-name>
-		<url-pattern>/customers/*</url-pattern>
+		<servlet-name>CustomerSave</servlet-name>
+		<url-pattern>/customer-save/*</url-pattern>
 	</servlet-mapping>
-
-	<!--  Customer JSPs -->
 	<servlet>
 		<servlet-name>Customer</servlet-name>
 		<jsp-file>/customer.jsp</jsp-file>
@@ -27,18 +25,16 @@
 		<servlet-name>CustomerInfo</servlet-name>
 		<url-pattern>/customer-info/*</url-pattern>
 	</servlet-mapping>
-	
-	<!--  Vendor JSPs -->
 	<servlet>
-		<servlet-name>Vendor</servlet-name>
-		<jsp-file>/vendor.jsp</jsp-file>
+		<servlet-name>CustomerLoans</servlet-name>
+		<jsp-file>/customer-loans.jsp</jsp-file>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>Vendor</servlet-name>
-		<url-pattern>/vendor/*</url-pattern>
+		<servlet-name>CustomerLoans</servlet-name>
+		<url-pattern>/customer-loans/*</url-pattern>
 	</servlet-mapping>
-	
-	<!--  Loan JSPs -->
+		
+	<!--  Loan -->
 	<servlet>
 		<servlet-name>Loan</servlet-name>
 		<jsp-file>/loan.jsp</jsp-file>
@@ -55,8 +51,27 @@
 		<servlet-name>LoanInfo</servlet-name>
 		<url-pattern>/loan-info/*</url-pattern>
 	</servlet-mapping>
+
+	<!--  Loan -->
+	<servlet>
+		<servlet-name>InventoryInfo</servlet-name>
+		<jsp-file>/inventory-info.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>InventoryInfo</servlet-name>
+		<url-pattern>/inventory-info/*</url-pattern>
+	</servlet-mapping>
 	
-	
+	<!--  Dashboard -->
+	<servlet>
+		<servlet-name>Dashboard</servlet-name>
+		<jsp-file>/dashboard.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Dashboard</servlet-name>
+		<url-pattern>/dashboard/*</url-pattern>
+	</servlet-mapping>
+		
 	<!--  Welcome file -->
 	<welcome-file-list>
 		<welcome-file>customer.jsp</welcome-file>

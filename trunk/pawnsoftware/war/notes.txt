@@ -1,11 +1,9 @@
 Main Objects and Pages
 ======================
 Customer
-Vendors
 
 Loans
 Inventory
-Invoices
 
 ****** Unit ******
 Customer URLs
@@ -13,12 +11,6 @@ Customer URLs
 Customer List
 Customer Information
 Customer Transactions
-
-Vendor URLs
------------
-Vendor List
-Vendor Information
-Vendor Transactions
 
 ****** Transactions ******
 
@@ -32,8 +24,6 @@ Loan URLs (should belong to a customer)
 Loan List
 Loan Information
 
-Invoice URLs (should belong to a vendor)
-------------
-Invoice List
-Invoice Information
-
+Note:
+ - Whenever there is a buy, it is going to buy_hold stocking for 30 days. 
+   If the customer wants to buy it, it will be bought for full price

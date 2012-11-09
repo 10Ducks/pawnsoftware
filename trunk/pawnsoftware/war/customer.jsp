@@ -15,9 +15,7 @@
 				<ul class="nav">
 					<li class="active"><a href="/customer">Customer</a></li>
 					<li><a href="/loan">Loans</a></li>
-					<li><a href="/inventory">Inventory</a></li>
-					<li><a href="/invoice">Invoices</a></li>
-					<li><a href="/vendor">Vendors</a></li>
+					<li><a href="/dashboard">Dashboard</a></li>
 				</ul>
 			</div>
 		</div>
