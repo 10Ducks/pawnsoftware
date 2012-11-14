@@ -14,24 +14,39 @@ import com.google.appengine.api.datastore.Entity;
 @SuppressWarnings("serial")
 public class CustomerServlet extends HttpServlet {
 	
-	public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
-		String license = req.getParameter("license");
-		String stateIssued = req.getParameter("stateIssued");
-		String expirationYear = req.getParameter("expirationYear");
-		String birthdate = req.getParameter("birthdate");
-		String firstname = req.getParameter("firstname");
-		String lastname = req.getParameter("lastname");
-		String address = req.getParameter("address");
-		String cityStateZip = req.getParameter("cityStateZip");
+	@SuppressWarnings("null")
+	public void doPut(HttpServletRequest req, HttpServletResponse res) throws IOException {
+		String[] customer = null;
+		customer[0] = req.getParameter("license");
+		customer[1] = req.getParameter("stateIssued");
+		customer[2] = req.getParameter("expirationYear");
+		customer[3] = req.getParameter("birthdate");
+		customer[4] = req.getParameter("firstname");
+		customer[5] = req.getParameter("lastname");
+		customer[6] = req.getParameter("address");
+		customer[7] = req.getParameter("cityStateZip");
 		PrintWriter out = res.getWriter();
-		out.println(license);
-		out.println(stateIssued);
-		out.println(expirationYear);
-		out.println(birthdate);
-		out.println(firstname);
-		out.println(lastname);
-		out.println(address);
-		out.println(cityStateZip);
+		out.println(customer[0]);
+		out.println(customer[1]);
+		out.println(customer[2]);
+		out.println(customer[3]);
+		out.println(customer[4]);
+		out.println(customer[5]);
+		out.println(customer[6]);
+		out.println(customer[7]);
+		//Customer.setCustomer(customer);
+	}
+	
+	public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
+		String action = req.getParameter("action");
+
+		if (action.equalsIgnoreCase("put")) {
+			doPut(req, res);
+			return;
+		} /*else if (action.equalsIgnoreCase("delete")) {
+			doDelete(req, resp);
+			return;
+		}*/
 	}
 	
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {

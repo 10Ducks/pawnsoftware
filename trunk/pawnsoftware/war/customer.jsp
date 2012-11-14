@@ -8,10 +8,10 @@
 	<script type="text/javascript" src="js/main.js"></script>
   </head>
   <body>
-  	<div class="container">
-  	<h2>Pawnsoftware</h2>
-		<div class="navbar">
-			<div class="navbar-inner">
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+			  	<a class="brand" href="customer">Pawnsoftware</a>
 				<ul class="nav">
 					<li class="active"><a href="/customer">Customer</a></li>
 					<li><a href="/loan">Loans</a></li>
@@ -19,6 +19,10 @@
 				</ul>
 			</div>
 		</div>
+	</div>
+	<br/>
+	<br/>
+ 	<div class="container">
 		<h4>Customers</h4>
 		<div class="input-append">
 			<input type="text" class="span11" id="text-search" name="search" placeholder="Search for customer name, license, or birthdate" />

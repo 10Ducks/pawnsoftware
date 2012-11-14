@@ -6,17 +6,25 @@ import com.google.appengine.api.datastore.KeyFactory;
 
 public class Customer {
 	
-	public static void setCustomer(String license, String firstname, String lastname, String birthdate) {
-		Entity customer = getCustomer(license);
+	public static void setCustomer(String[] customerInfo) {
+		Entity customer = getCustomer(customerInfo[0]);
 		if(customer==null) {
-			customer = new Entity("Customer",license);
-			customer.setProperty("firstname", firstname);
-			customer.setProperty("lastname", lastname);
-			customer.setProperty("birthdate", birthdate);
+			customer = new Entity("Customer",customerInfo[0]);
+			customer.setProperty("stateIssued", customerInfo[1]);
+			customer.setProperty("expirationYear", customerInfo[2]);
+			customer.setProperty("birthdate", customerInfo[3]);
+			customer.setProperty("firstname", customerInfo[4]);
+			customer.setProperty("lastname", customerInfo[5]);
+			customer.setProperty("address", customerInfo[6]);
+			customer.setProperty("remarks", customerInfo[7]);
 		} else {
-			customer.setProperty("firstname", firstname);
-			customer.setProperty("lastname", lastname);
-			customer.setProperty("birthdate", birthdate);
+			customer.setProperty("stateIssued", customerInfo[1]);
+			customer.setProperty("expirationYear", customerInfo[2]);
+			customer.setProperty("birthdate", customerInfo[3]);
+			customer.setProperty("firstname", customerInfo[4]);
+			customer.setProperty("lastname", customerInfo[5]);
+			customer.setProperty("address", customerInfo[6]);
+			customer.setProperty("remarks", customerInfo[7]);
 		}
 		Util.persistEntity(customer);
 	}	

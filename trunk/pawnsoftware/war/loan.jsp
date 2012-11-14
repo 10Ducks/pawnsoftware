@@ -8,10 +8,10 @@
 	<script type="text/javascript" src="js/main.js"></script>
   </head>
   <body>
-  	<div class="container">
-  	<h2>Pawnsoftware</h2>
-		<div class="navbar">
-			<div class="navbar-inner">
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+			  	<a class="brand" href="customer">Pawnsoftware</a>
 				<ul class="nav">
 					<li><a href="/customer">Customer</a></li>
 					<li class="active"><a href="/loan">Loans</a></li>
@@ -19,12 +19,15 @@
 				</ul>
 			</div>
 		</div>
-		<form method="get" action="loan">
-			<div class="input-append">
-				<input type="text" class="span11" id="text-search" name="search" placeholder="Search for loan number" />
-				<button class="btn btn-primary" type="button">Search</button>
-			</div>
-		</form>
+	</div>
+	<br/>
+	<br/>
+	<br/>
+  	<div class="container">
+		<div class="input-append">
+			<input type="text" class="span11" id="text-search" name="search" placeholder="Search for loan number" />
+			<button class="btn btn-primary" type="button">Search</button>
+		</div>
 		<h3>Loans</h3>
 		<table class="table table-striped">
 			<thead>
