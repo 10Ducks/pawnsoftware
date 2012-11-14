@@ -8,10 +8,10 @@
 	<script type="text/javascript" src="js/main.js"></script>
   </head>
   <body>
-  	<div class="container">
-	  	<h2>Pawnsoftware</h2>
-		<div class="navbar">
-			<div class="navbar-inner">
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+			  	<a class="brand" href="customer">Pawnsoftware</a>
 				<ul class="nav">
 					<li><a href="/customer">Customer</a></li>
 					<li class="active"><a href="/loan">Loans</a></li>
@@ -19,6 +19,11 @@
 				</ul>
 			</div>
 		</div>
+	</div>
+	<br/>
+	<br/>
+	<br/>
+  	<div class="container">
 		<div class="btn-group">
 			<button class="btn btn-default" onclick='window.location="/customer-loans"'>Customer Transactions</button>
 		</div>
