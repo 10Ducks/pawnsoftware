@@ -5,6 +5,9 @@ Customer
 Loans
 Inventory
 
+
+
+
 ****** Unit ******
 Customer URLs
 -------------
@@ -12,8 +15,10 @@ Customer List
 Customer Information
 Customer Transactions
 
-****** Transactions ******
 
+
+
+****** Transactions ******
 Inventory URLs (should belong to pawnshop)
 --------------
 Inventory List

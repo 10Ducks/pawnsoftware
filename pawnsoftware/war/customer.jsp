@@ -1,11 +1,29 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.util.List" %>
+<%@ page import="com.google.appengine.api.users.User" %>
+<%@ page import="com.google.appengine.api.users.UserService" %>
+<%@ page import="com.google.appengine.api.users.UserServiceFactory" %>
+<%@ page import="com.google.appengine.api.datastore.DatastoreServiceFactory" %>
+<%@ page import="com.google.appengine.api.datastore.DatastoreService" %>
+<%@ page import="com.google.appengine.api.datastore.Query" %>
+<%@ page import="com.google.appengine.api.datastore.Entity" %>
+<%@ page import="com.google.appengine.api.datastore.FetchOptions" %>
+<%@ page import="com.google.appengine.api.datastore.Key" %>
+<%@ page import="com.google.appengine.api.datastore.KeyFactory" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+
+<% 
+	DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+	Query query = new Query("Customer").addSort("lastname", Query.SortDirection.DESCENDING);
+	List<Entity> customers = datastore.prepare(query).asList(FetchOptions.Builder.withLimit(20));
+%>
+
 <!DOCTYPE HTML>
 <html>
   <head>
     <title>Customers</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 	<link rel="stylesheet" type="text/css" href="css/main.css" />
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
   </head>
   <body>
 	<div class="navbar navbar-fixed-top">
@@ -28,10 +46,18 @@
 			<input type="text" class="span11" id="text-search" name="search" placeholder="Search for customer name, license, or birthdate" />
 			<button class="btn btn-primary" type="button">Search</button>
 		</div>
+		<br/>		
+		<%
+			if(request.getParameter("message")==null) {
+				out.print("");
+			} else {
+				out.print("<div id='message' class='alert alert-'"+request.getParameter("status")+"'><i class='icon-warning-sign'></i>  "+request.getParameter("message")+"</div>");
+			}
+		%>
 		<div class="btn-group">
 			<button class="btn btn-primary" onclick='window.location="customer-info"'>New Customer</button>
 		</div>
-		<table class="table">
+		<table class="table table-striped">
 			<thead>
 				<tr>
 					<th>License</th>
@@ -43,14 +69,24 @@
 				</tr>
 			</thead>
 			<tbody>
+				<% 
+					for(Entity customer:customers) {
+						pageContext.setAttribute("license",customer.getKey().getName());
+						pageContext.setAttribute("firstname",customer.getProperty("firstname"));
+						pageContext.setAttribute("lastname",customer.getProperty("lastname"));
+						pageContext.setAttribute("cityStateZip",customer.getProperty("cityStateZip"));
+				%>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>${fn:escapeXml(license)}</td>
+					<td>${fn:escapeXml(lastname)},${fn:escapeXml(firstname)}</td>
+					<td>${fn:escapeXml(birthdate)}</td>
+					<td>${fn:escapeXml(cityStateZip)}</td>
 					<td></td>
 					<td></td>
 				</tr>
+				<%
+					}
+				%>
 			</tbody>
 		</table>
 		<p><b>To Do:</b> On customer select, go to customer info.</p>
