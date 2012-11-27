@@ -1,28 +1,4 @@
-<<<<<<< .mine
 <%@ page import="com.pawnsoftware.Customer" %>
-
-=======
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="java.util.List" %>
-<%@ page import="com.google.appengine.api.users.User" %>
-<%@ page import="com.google.appengine.api.users.UserService" %>
-<%@ page import="com.google.appengine.api.users.UserServiceFactory" %>
-<%@ page import="com.google.appengine.api.datastore.DatastoreServiceFactory" %>
-<%@ page import="com.google.appengine.api.datastore.DatastoreService" %>
-<%@ page import="com.google.appengine.api.datastore.Query" %>
-<%@ page import="com.google.appengine.api.datastore.Entity" %>
-<%@ page import="com.google.appengine.api.datastore.FetchOptions" %>
-<%@ page import="com.google.appengine.api.datastore.Key" %>
-<%@ page import="com.google.appengine.api.datastore.KeyFactory" %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-
-<% 
-	DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
-	Query query = new Query("Customer").addSort("lastname", Query.SortDirection.DESCENDING);
-	List<Entity> customers = datastore.prepare(query).asList(FetchOptions.Builder.withLimit(20));
-%>
-
->>>>>>> .r57
 <!DOCTYPE HTML>
 <html>
   <head>
@@ -53,14 +29,6 @@
 				<button class="btn btn-primary" type="button">Search</button>
 			</div>
 		</form>
-		<br/>		
-		<%
-			if(request.getParameter("message")==null) {
-				out.print("");
-			} else {
-				out.print("<div id='message' class='alert alert-'"+request.getParameter("status")+"'><i class='icon-warning-sign'></i>  "+request.getParameter("message")+"</div>");
-			}
-		%>
 		<div class="btn-group">
 			<button class="btn btn-primary" onclick='window.location="customer-info"'>New Customer</button>
 		</div>
@@ -76,29 +44,7 @@
 				</tr>
 			</thead>
 			<tbody>
-<<<<<<< .mine
-				<%= Customer.getCustomersTable(request.getParameter("q")) %>
-				<% out.print(request.getParameter("q")); %>
-=======
-				<% 
-					for(Entity customer:customers) {
-						pageContext.setAttribute("license",customer.getKey().getName());
-						pageContext.setAttribute("firstname",customer.getProperty("firstname"));
-						pageContext.setAttribute("lastname",customer.getProperty("lastname"));
-						pageContext.setAttribute("cityStateZip",customer.getProperty("cityStateZip"));
-				%>
-				<tr>
-					<td>${fn:escapeXml(license)}</td>
-					<td>${fn:escapeXml(lastname)},${fn:escapeXml(firstname)}</td>
-					<td>${fn:escapeXml(birthdate)}</td>
-					<td>${fn:escapeXml(cityStateZip)}</td>
-					<td></td>
-					<td></td>
-				</tr>
->>>>>>> .r57
-				<%
-					}
-				%>
+				<% Customer.getCustomersTable(request.getParameter("q")); %>
 			</tbody>
 		</table>
 		<p><b>To Do:</b> On customer select, go to customer info.</p>
