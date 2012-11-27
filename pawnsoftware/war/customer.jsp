@@ -1,3 +1,7 @@
+<<<<<<< .mine
+<%@ page import="com.pawnsoftware.Customer" %>
+
+=======
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.util.List" %>
 <%@ page import="com.google.appengine.api.users.User" %>
@@ -18,6 +22,7 @@
 	List<Entity> customers = datastore.prepare(query).asList(FetchOptions.Builder.withLimit(20));
 %>
 
+>>>>>>> .r57
 <!DOCTYPE HTML>
 <html>
   <head>
@@ -42,10 +47,12 @@
 	<br/>
  	<div class="container">
 		<h4>Customers</h4>
-		<div class="input-append">
-			<input type="text" class="span11" id="text-search" name="search" placeholder="Search for customer name, license, or birthdate" />
-			<button class="btn btn-primary" type="button">Search</button>
-		</div>
+		<form method="get" action="/customer">
+			<div class="input-append">
+				<input type="text" class="span11" id="text-search" name="q" placeholder="Search for customer name, license, or birthdate" />
+				<button class="btn btn-primary" type="button">Search</button>
+			</div>
+		</form>
 		<br/>		
 		<%
 			if(request.getParameter("message")==null) {
@@ -69,6 +76,10 @@
 				</tr>
 			</thead>
 			<tbody>
+<<<<<<< .mine
+				<%= Customer.getCustomersTable(request.getParameter("q")) %>
+				<% out.print(request.getParameter("q")); %>
+=======
 				<% 
 					for(Entity customer:customers) {
 						pageContext.setAttribute("license",customer.getKey().getName());
@@ -84,6 +95,7 @@
 					<td></td>
 					<td></td>
 				</tr>
+>>>>>>> .r57
 				<%
 					}
 				%>
