@@ -15,6 +15,7 @@ import com.google.appengine.api.datastore.Entity;
 public class CustomerServlet extends HttpServlet {
 	
 	public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
+		Customer.setCustomer(req);
 		PrintWriter out = res.getWriter();
 		if(req.getParameter("save").equals("Save Customer")) {
 			Customer.setCustomer(req);
