@@ -19,11 +19,8 @@ public class CustomerServlet extends HttpServlet {
 		PrintWriter out = res.getWriter();
 		if(req.getParameter("save").equals("Save Customer")) {
 			Customer.setCustomer(req);
-			String message = "Successfully saved customer";
-			String status = "success";
-			String page = "customer?message="+message+"&status="+status;
+			String page = "/customer-info";
 			res.sendRedirect(page);
-			//out.print("Saved");
 		} else {
 			out.print("Invalid input");
 		}

@@ -24,13 +24,9 @@
 	<h3>Customer Info</h3>
 		<form method="post" action="customer-save">
 			<div class="btn-group">
-				<input type="submit" name="save" id="saveCustomer" class="btn btn-primary" onclick="save('customer')" value="Save Customer" />
-			</div>
-			<div class="btn-group">
-				<button type="button" class="btn btn-primary" onclick='window.location="/loan-info"'>New Loan or Buy</button>
-			</div>
-			<div class="btn-group">
-				<button type="button" class="btn btn-primary" onclick='window.location="/customer-loans"'>Customer Transactions</button>
+				<input type="submit" name="save" id="saveCustomer" class="btn btn-primary" value="Save Customer" />
+				<button type="button" class="btn btn-primary">New Loan or Buy</button>
+				<button type="button" class="btn btn-primary">Customer Transactions</button>
 			</div>
 			<div class="btn-group">
 				<button class="btn btn-default" onclick='reset()'>Clear</button>
