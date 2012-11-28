@@ -19,7 +19,7 @@ class Util {
 	}
 		
 	public static Entity findEntity(Key key) {
-		try {  
+		try {
 			return datastore.get(key);
 		} catch (EntityNotFoundException e) {
 			return null;
