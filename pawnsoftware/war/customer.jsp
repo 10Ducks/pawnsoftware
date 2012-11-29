@@ -1,4 +1,17 @@
 <%@ page import="com.pawnsoftware.Customer" %>
+<%@ page import="java.util.List" %>
+<%@ page import="com.google.appengine.api.users.User" %>
+<%@ page import="com.google.appengine.api.users.UserService" %>
+<%@ page import="com.google.appengine.api.users.UserServiceFactory" %>
+<%
+	UserService userService = UserServiceFactory.getUserService();
+	User user = userService.getCurrentUser();
+	if (user!=null) {
+		pageContext.setAttribute("user", user);
+	} else {
+		response.sendRedirect(userService.createLoginURL(request.getRequestURI()));
+	}
+%>
 <!DOCTYPE HTML>
 <html>
   <head>
@@ -23,6 +36,7 @@
 	<br/>
  	<div class="container">
 		<h4>Customers</h4>
+		<span class="label label-info">Welcome, ${user.nickname}</span> <a href="<%= userService.createLoginURL(request.getRequestURI()) %>">logout</a><br/><br/>
 		<form method="get" action="/customer">
 			<div class="input-append">
 				<input type="text" class="span11" id="text-search" name="q" placeholder="Search for customer name, license, or birthdate" />
@@ -51,4 +65,3 @@
 	</div>
   </body>
 </html>
-
