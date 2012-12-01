@@ -42,25 +42,27 @@
 				<input type="text" class="span11" id="text-search" name="q" placeholder="Search for customer name, license, or birthdate" />
 				<button class="btn btn-primary" type="button">Search</button>
 			</div>
-		</form>
+		</form><!-- End of Form Search -->
 		<div class="btn-group">
 			<button class="btn btn-primary" onclick='window.location="customer-info"'>New Customer</button>
 		</div>
-		<table class="table table-striped">
-			<thead>
-				<tr>
-					<th>License</th>
-					<th>Full Name</th>
-					<th>Birthdate</th>
-					<th>City, State, and Zip</th>
-					<th>Active Loans</th>
-					<th>Balance</th>
-				</tr>
-			</thead>
-			<tbody>
-				<% Customer.getCustomersTable(request.getParameter("q")); %>
-			</tbody>
-		</table>
+		<form method="post" action="">
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>License</th>
+						<th>Full Name</th>
+						<th>Birthdate</th>
+						<th>City, State, and Zip</th>
+						<th>Active Loans</th>
+						<th>Balance</th>
+					</tr>
+				</thead>
+				<tbody>
+					<%= Customer.getCustomersTable() %>
+				</tbody>
+			</table>
+		</form>
 		<p><b>To Do:</b> On customer select, go to customer info.</p>
 	</div>
   </body>
