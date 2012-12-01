@@ -1,3 +1,24 @@
+<%@ page import="com.pawnsoftware.Customer" %>
+<%@ page import="java.util.List" %>
+<%@ page import="com.google.appengine.api.users.User" %>
+<%@ page import="com.google.appengine.api.users.UserService" %>
+<%@ page import="com.google.appengine.api.users.UserServiceFactory" %>
+<%
+	UserService userService = UserServiceFactory.getUserService();
+	User user = userService.getCurrentUser();
+	String license = request.getParameter("license");
+	
+	Iterable<Entity> customerInfo = Customer.getAllCustomerInfo(license);
+	
+	
+	
+	if (user!=null) {
+		pageContext.setAttribute("user", user);
+		pageContext.setAttribute("license", license);
+	} else {
+		response.sendRedirect(userService.createLoginURL(request.getRequestURI()));
+	}
+%>
 <!DOCTYPE HTML>
 <html>
   <head>
@@ -22,6 +43,7 @@
 	<br/>
   	<div class="container">
 	<h3>Customer Info</h3>
+		<span class="label label-info">Welcome, ${user.nickname}</span><a href="<%= userService.createLoginURL(request.getRequestURI()) %>">logout</a><br/><br/>
 		<form method="post" action="customer-save">
 			<div class="btn-group">
 				<input type="submit" name="save" id="saveCustomer" class="btn btn-primary" value="Save Customer" />
