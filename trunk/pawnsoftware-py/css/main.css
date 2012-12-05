@@ -1,0 +1,6 @@
+.align-top {
+	vertical-align: top;
+}
+table.table-hover tr td {
+	cursor:pointer;
+}
