@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Customers</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+  </head>
+  <body>
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+			  	<a class="brand" href="customer">Pawnsoftware</a>
+				<ul class="nav">
+					<li class="active"><a href="/customer">Customer</a></li>
+					<li><a href="/loan">Loans</a></li>
+					<li><a href="/dashboard">Dashboard</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<br/>
+	<br/>
+ 	<div class="container">
+		<h4>Customers</h4>
+		<span class="label label-info">Welcome, </span> <a href="">logout</a><br/><br/>
+		<form method="get" action="/customer">
+			<div class="input-append">
+				<input type="text" class="span11" id="text-search" name="q" placeholder="Search for customer name, license, or birthdate" />
+				<button class="btn btn-primary" type="button">Search</button>
+			</div>
+		</form><!-- End of Form Search -->
+		<div class="btn-group">
+			<button class="btn btn-primary" onclick='window.location="customer-info"'>New Customer</button>
+		</div>
+		<form method="post" action="">
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>License</th>
+						<th>Full Name</th>
+						<th>Birthdate</th>
+						<th>City, State, and Zip</th>
+						<th>Active Loans</th>
+						<th>Balance</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+		</form>
+		<p><b>To Do:</b> On customer select, go to customer info.</p>
+	</div>
+  </body>
+</html>
